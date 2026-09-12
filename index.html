@@ -3,36 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishna Prasad Sah</title>
+    <title>Krishna Prasad Sah | Portfolio</title>
+    <!-- Professional Fonts: Playfair Display for Headings, Inter for Body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- BWB UAV Custom Cursor -->
+    <div id="uav-cursor">
+        <svg viewBox="0 0 100 100" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 10 L90 70 L70 90 L50 75 L30 90 L10 70 Z" fill="var(--primary-color)"/>
+        </svg>
+    </div>
+
     <header>
         <nav>
             <div class="logo">Krishna Prasad Sah</div>
-            <ul>
-                <li><a href="#about">About</a></li>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><button id="btn-theme"><i class="fas fa-moon"></i></button></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <img src="img/profile.jpg" alt="Krishna Prasad Sah" class="profile-img" onerror="this.src='https://dummyimage.com/150x150/0366d6/ffffff&text=KPS'">
-            <h1>Hi, I'm Krishna Prasad Sah</h1>
-            <p>Student & Developer</p>
-            <button id="btn-theme">Toggle Dark Mode</button>
+        <!-- Hero Section -->
+        <section class="hero container">
+            <div class="hero-content">
+                <span class="role-badge">AEROSPACE ENGINEERING STUDENT</span>
+                <h1>Krishna Prasad Sah</h1>
+                <p>
+                    I am an engineering student at Pulchowk Campus, passionate about aerospace technologies, autonomous systems, and aerodynamics. 
+                    My academic focus involves designing Blended Wing Body (BWB) UAVs, studying computational fluid dynamics (CFD), and innovating in flight mechanics.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#research" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="image-backdrop"></div>
+                <!-- Replace 'profile.jpg' with your actual image in the img folder -->
+                <img src="img/profile.jpg" alt="Krishna Prasad Sah" class="profile-img" onerror="this.src='https://dummyimage.com/600x750/1e293b/ffffff&text=Krishna+Prasad+Sah'">
+            </div>
         </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my personal website hosted on GitHub Pages and routed through Cloudflare!</p>
-        </section>
+        <!-- Education and Research Section -->
+        <section id="education" class="details-section container">
+            <div class="education-col">
+                <h2>Education</h2>
+                
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="edu-info">
+                        <h3>B.E. in Aerospace / Mechanical Engineering</h3>
+                        <p class="university">Pulchowk Campus, Tribhuvan University</p>
+                        <p class="date">Expected 2026</p>
+                    </div>
+                </div>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:078bas024.krishna@pcampus.edu.np">078bas024.krishna@pcampus.edu.np</a></p>
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-school"></i></div>
+                    <div class="edu-info">
+                        <h3>High School Diploma (Science)</h3>
+                        <p class="university">Your High School Name</p>
+                        <p class="date">Graduated Year</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-col">
+                <h2>Research Interest</h2>
+                <ul class="interest-list">
+                    <li>Blended Wing Body (BWB) UAVs</li>
+                    <li>Computational Fluid Dynamics (CFD)</li>
+                    <li>Aerodynamics & Flight Mechanics</li>
+                    <li>Autonomous Control Systems</li>
+                    <li>Finite Element Analysis</li>
+                </ul>
+            </div>
         </section>
     </main>
 
